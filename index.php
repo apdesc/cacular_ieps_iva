@@ -1,4 +1,6 @@
 <?php
+##Creado por abimael Gutierrez @apdesc
+##Funcion de formatos de números creado por Josué Jiménez @josumx
 include("funcion.php");
 if($_SERVER['REQUEST_METHOD'] =="POST")
 {	
@@ -51,7 +53,7 @@ $mostrar_resultado="Litros de combustible:<br> <b>$listroscombustible</b>
 Precio de combustible:<br>
 <b>$preciocombustible</b><br>
 Total combustible:<br>
-<b>$total_combustible</b>
+<b>".decimales2($total_combustible)."</b>
 <br>
 Cuota Ieps<br>
 <b>$cuotaieps</b>
@@ -60,7 +62,7 @@ Importe ieps:<br>
 <b>".numeros2($importeieps)."</b>
 <br>
 Condición comercial<br>
-<b>$condicioncomercial</b>
+<b>".decimales2($condicioncomercial)."</b>
 <br>
 Importe combustible
 <br>
@@ -99,6 +101,7 @@ Total Factura
 <head>
 	<title>IVA-IEPS-IMPORTE FLETE</title>
 
+
 	<style>
 		input{
 
@@ -115,7 +118,7 @@ Total Factura
 	.resultado{
 		right: 200px;
 		position: absolute;
-		top: 100px;
+		top: 30px;
 		width: 400px;
 		height: auto;
 		padding: 10px;
@@ -128,9 +131,9 @@ Total Factura
 
 	<form method="post" action="index.php">
 		<label for="listroscombustible"> Litros de combustible</label>
-		<input type="number" step="any" name="listroscombustible" id="listroscombustible" autocomplete="on">
+		<input type="number" step="any" name="listroscombustible" id="listroscombustible" autocomplete="on" value="<?php echo $listroscombustible; ?>">
 		<label for="preciocombustible">Precio de combustible</label>
-		<input type="number" step="any" name="preciocombustible" id="preciocombustible" autocomplete="on">
+		<input type="number" step="any" name="preciocombustible" id="preciocombustible" autocomplete="on" value="<?php echo $preciocombustible; ?>">
 		<label for="cuotaieps">Cuota Ieps</label>
 		<input type="number" step="any" name="cuotaieps" id="cuotaieps" autocomplete="on">
 		<label for="condicioncomercial"> Condición comercial</label>

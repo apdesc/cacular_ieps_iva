@@ -11,6 +11,7 @@ if($_SERVER['REQUEST_METHOD'] =="POST")
 	$tasaiva="0";
 	$importeflete="0";
 	$ivaflete="0";
+	$ivarentecionflete="0";
 
 	$total_combustile="0";
 	$importeieps="0";
@@ -135,17 +136,17 @@ Total Factura
 		<label for="preciocombustible">Precio de combustible</label>
 		<input type="number" step="any" name="preciocombustible" id="preciocombustible" autocomplete="on" value="<?php echo $preciocombustible; ?>">
 		<label for="cuotaieps">Cuota Ieps</label>
-		<input type="number" step="any" name="cuotaieps" id="cuotaieps" autocomplete="on">
+		<input type="number" step="any" name="cuotaieps" id="cuotaieps" autocomplete="on" value="<?php echo $cuotaieps;?>">
 		<label for="condicioncomercial"> Condición comercial</label>
-		<input type="number" step="any" name="condicioncomercial" id="condicioncomercial" autocomplete="on">
+		<input type="number" step="any" name="condicioncomercial" id="condicioncomercial" autocomplete="on" value="<?php echo $condicioncomercial;?>">
 		<label for="tasaiva">Tasa Iva</label>
-		<input type="number" step="any" name="tasaiva" id="tasaiva" autocomplete="on">
+		<input type="number" step="any" name="tasaiva" id="tasaiva" autocomplete="on" value="<?php echo $tasaiva; ?>">
 		<label for="importeflete">Importe Flete</label>
-		<input type="number" step="any" name="importeflete" name="importeflete" autocomplete="on">
+		<input type="number" step="any" name="importeflete" name="importeflete" autocomplete="on" value="<?php echo $importeflete;?>">
 		<label for="ivaflete">Iva Flete</label>
-		<input type="number" step="any" name="ivaflete" id="ivaflete" autocomplete="on">
+		<input type="number" step="any" name="ivaflete" id="ivaflete" autocomplete="on" value="<?php echo $ivaflete; ?>">
 		<label for="ivarentecionflete">Iva Retencion Flete</label>
-		<input type="number" step="any" name="ivarentecionflete" id="ivarentecionflete" autocomplete="on">
+		<input type="number" step="any" name="ivarentecionflete" id="ivarentecionflete" autocomplete="on" value="<?php echo $ivarentecionflete; ?>">
 
 		<input type="submit" name="submit" value="Calcular">
 	</form>
